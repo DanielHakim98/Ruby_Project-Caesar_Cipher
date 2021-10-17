@@ -2,6 +2,7 @@ require 'pry-byebug'
 def caesar (str,num)
   str_arr=str.bytes
   str_arr.each_with_index do |code,i|
+    #binding.pry
     if str_arr[i]>=65 and str_arr[i]<=90
       str_arr[i]+=num
       str_arr[i]=
@@ -37,10 +38,16 @@ def check_wrap_smol(code_smol)
     code_smol=(code_smol-122)+97-1 
   end : 
   while(code_smol<97) do 
-    ode_smol=122-(97-code_smol)+1 
+    code_smol=122-(97-code_smol)+1 
   end
   #check_wrap_smol(code_smol) if code_smol>90 or code_smol<65
   code_smol
 end
 
-p caesar("Hello, World!",-10)
+p caesar('A',1)
+p caesar('Aaa',1)
+p caesar('Hello, World!', 5)
+p caesar('Mjqqt, Btwqi!', -5)
+p caesar('Z',1)
+p caesar('Hello, World!', 75)
+p caesar("Hello, World!",-29)

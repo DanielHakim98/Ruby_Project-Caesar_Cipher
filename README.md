@@ -7,3 +7,6 @@
 * Works well except for large negative number.
 * Code can be simplified more but I have no idea for now.
 ---
+17/10/21:
+* I finally found the cause of the error of negative number. It's because on the line 41 of the code, the there is typo on the 'code_smol', and the typo is I forgot to include the 'c' in the 'code_smol'.
+---
